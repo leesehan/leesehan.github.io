@@ -1,0 +1,234 @@
+/* --- header --- */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 64px;
+}
+
+#logo {
+    position: absolute;
+    top: 16px;
+    left: 64px;
+    text-decoration: none;
+}
+
+#logo > span {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #003D9B;
+}
+
+#menu > a {
+    font-family: 'Noto Sans KR';
+    font-weight: 700;
+    color: #434654;
+    margin: 0 16px;
+    text-decoration: none;
+}
+
+#menu > a.active,
+#menu > a:hover {
+    color: #003D9B;
+    border-bottom: 2px solid #003D9B;
+}
+
+/* --- common section --- */
+section {
+    border-bottom: 1px solid #C3C6D6;
+}
+
+
+/* --- hero section --- */
+main > section.s1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    background: url('../img/main.jpg') center / cover no-repeat;
+    border: 0;
+}
+
+main > section.s1::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+main > section.s1 > h1 {
+    display: flex;
+    align-items: flex-start;
+    font-family: 'Noto Sans';
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    padding: 16px 32px;
+}
+
+main > section.s1 > p {
+    font-family: 'Noto Sans KR';
+    text-align: center;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 500;
+    margin: 16px 0 0 0;
+}
+
+/* --- intro section --- */
+main > section.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 96px 256px;
+}
+
+main > section.intro > h2 {
+    font-family: 'Noto Sans KR';
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #003D9B;
+}
+
+main > section.intro > h2::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 4px;
+    background-color: #003D9B;
+    margin: 24px auto;
+}
+
+main > section.intro > p {
+    font-family: 'Pretendard';
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: #434654;
+    line-height: 1.6;
+}
+
+/* --- content section --- */
+main > section.content > .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 80px 64px;
+}
+
+main > section.content > .inner > .box-img {
+    width: 550px;
+    min-width: 550px;
+    height: 343px;
+    text-indent: -9999px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    border: 1px solid #C3C6D6;
+    box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.10);
+}
+
+main > section.content:nth-child(1 of .content) > .inner > .box-img { background-image: url('../img/local.jpg'); }
+main > section.content:nth-child(2 of .content) > .inner > .box-img { background-image: url('../img/global.jpg'); }
+main > section.content:nth-child(3 of .content) > .inner > .box-img { background-image: url('../img/city.jpg'); }
+main > section.content:nth-child(4 of .content) > .inner > .box-img { background-image: url('../img/food.jpg'); background-position: center 70%;}
+main > section.content:nth-child(5 of .content) > .inner > .box-img { background-image: url('../img/cafe.jpg'); background-position: center 67%; }
+
+main > section.content:nth-child(odd of .content) > .inner > .box-img {
+    margin-right: 48px;
+}
+
+main > section.content:nth-child(even of .content) > .inner {
+    flex-direction: row-reverse;
+}
+
+main > section.content:nth-child(even of .content) > .inner > .box-img {
+    margin-left: 48px;
+}
+
+main > section.content > .inner > .box-content {
+    max-width: 552px;
+}
+
+main > section.content > .inner > .box-content > label {
+    display: inline-block;
+    font-family: 'Noto Sans';
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #003D9B;
+    letter-spacing: 0.7px;
+    border-bottom: 2px solid #0052CC;
+    margin: 0 0 24px 0;
+    padding-bottom: 4px;
+}
+
+main > section.content > .inner > .box-content > h3 {
+    font-family: 'Noto Sans KR';
+    font-size: 32px;
+    font-weight: 700;
+    color: #041B3C;
+    margin: 0 0 24px 0;
+}
+
+main > section.content > .inner > .box-content > p {
+    font-family: 'Pretendard';
+    font-size: 18px;
+    font-weight: 400;
+    color: #434654;
+    line-height: 1.6;
+    margin: 0 0 24px 0;
+}
+
+main > section.content > .inner > .box-content > a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Noto Sans KR';
+    text-align: center;
+    font-weight: 500;
+    color: #003D9B;
+    background-color: transparent;
+    border: 2px solid #003D9B;
+    border-radius: 8px;
+    text-decoration: none;
+    padding: 14px 24px;
+    cursor: pointer;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+main > section.content > .inner > .box-content > a:hover {
+    color: #ffffff;
+    background-color: #003D9B;
+}
+
+/* --- content section --- */
+footer {
+    background-color: #F1F3FF;
+    padding: 48px 64px;
+}
+
+footer > .logo {
+    font-family: 'Noto Sans';
+    font-size: 14px;
+    font-weight: 700;
+    color: #041B3C;
+}
+
+footer > p {
+    font-family: 'Noto Sans KR';
+    font-size: 14px;
+    color: #434654;
+    margin: 8px 0 0 0;
+}
